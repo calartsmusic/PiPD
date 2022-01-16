@@ -1,0 +1,154 @@
+#N canvas 1005 198 505 523 12;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array pitchmod14 131 float 1;
+#A 0 0.125538 -0.345229 0.564921 0.549229 0.533537 0.517844 0.513921
+0.509998 0.506075 0.502152 0.499014 0.495875 0.492737 0.489598 0.48646
+0.48646 0.48646 0.48646 0.313848 0.243233 0.172618 0.141234 0.109849
+0.078465 0.0313883 -0.0156884 -0.0235345 -0.0313807 -0.0313807 -0.0313807
+-0.0313807 -0.0313807 -0.0313807 -0.0313807 -0.0313807 -0.0313807 -0.0313807
+-0.0313807 -0.0313807 -0.0313807 -0.0313807 -0.0313807 -0.0313807 -0.0313807
+-0.0313807 -0.0313807 -0.027101 -0.0228213 -0.0185416 -0.0142619 -0.00998215
+-0.00570245 -0.00142275 0.00285695 0.00713665 0.0114163 0.0156961 0.0222345
+0.0287729 0.0353113 0.0418498 0.0483882 0.0549266 0.0614651 0.0680035
+0.0745419 0.0810804 0.0876188 0.0941572 0.100193 0.106228 0.112264
+0.118299 0.124335 0.13037 0.136406 0.142441 0.148476 0.154512 0.160547
+0.166583 0.172618 0.186741 0.200864 0.214987 0.22911 0.243233 0.257356
+0.271479 0.285602 0.299725 0.313849 0.32431 0.334772 0.345233 0.355694
+0.366156 0.39231 -0.470763 -0.564917 -0.564917 -0.553147 -0.541378
+-0.529609 -0.51784 -0.507378 -0.496917 -0.486456 -0.480179 -0.473902
+-0.467625 -0.461348 -0.455071 -0.444609 -0.434148 -0.423687 -0.41584
+-0.407994 -0.400148 -0.392302 -0.360918 -0.345225 -0.345225 -0.329533
+-0.321687 -0.313841 -0.298149 -0.298149 -0.298149 -0.298149 -0.298149
+;
+#X coords 0 1.02 130 -1.02 258 130 1;
+#X restore 202 27 graph;
+#X floatatom 38 145 4 0 0 0 - - -;
+#X floatatom 57 315 4 0 0 0 - - -;
+#X obj 38 256 *~;
+#X text 90 226 modulation;
+#X text 88 245 depth;
+#X floatatom 56 229 4 0 0 0 - - -;
+#X obj 39 340 +~;
+#X text 87 331 frequency;
+#X obj 38 367 osc~;
+#X obj 38 172 tabosc4~ pitchmod14;
+#X text 91 313 carrier;
+#X obj 66 452 outlet~ left;
+#X obj 168 454 outlet~ right;
+#X floatatom 67 396 0 0 100 0 - - -;
+#N canvas 159 26 722 503 output 0;
+#X obj 338 160 t b;
+#X obj 338 110 f;
+#X obj 338 60 inlet;
+#X text 344 29 mute;
+#X obj 338 185 f;
+#X msg 426 180 0;
+#X msg 338 85 bang;
+#X obj 338 135 moses 1;
+#X obj 397 110 moses 1;
+#X obj 83 148 dbtorms;
+#X obj 397 85 r master-lvl;
+#X obj 83 42 r master-lvl;
+#X obj 338 210 s master-lvl;
+#X obj 20 155 inlet~;
+#X obj 199 41 inlet;
+#X text 199 18 level;
+#X obj 199 105 s master-lvl;
+#X msg 96 65 set \$1;
+#X obj 96 90 outlet;
+#X obj 83 198 line~;
+#X obj 20 207 *~;
+#X obj 83 173 pack 0 50;
+#X text 20 132 audio;
+#X text 96 114 show level;
+#X obj 426 155 t b;
+#X obj 20 181 hip~ 1;
+#X obj 148 274 outlet~ L;
+#X obj 219 275 outlet~ R;
+#X connect 0 0 4 0;
+#X connect 1 0 7 0;
+#X connect 2 0 6 0;
+#X connect 4 0 12 0;
+#X connect 5 0 12 0;
+#X connect 6 0 1 0;
+#X connect 7 0 0 0;
+#X connect 7 1 24 0;
+#X connect 8 1 4 1;
+#X connect 9 0 21 0;
+#X connect 10 0 1 1;
+#X connect 10 0 8 0;
+#X connect 11 0 9 0;
+#X connect 11 0 17 0;
+#X connect 13 0 25 0;
+#X connect 14 0 16 0;
+#X connect 17 0 18 0;
+#X connect 19 0 20 1;
+#X connect 20 0 26 0;
+#X connect 20 0 27 0;
+#X connect 21 0 19 0;
+#X connect 24 0 5 0;
+#X connect 25 0 20 0;
+#X restore 37 425 pd output;
+#X obj 219 174 r k2;
+#X obj 38 86 r k1;
+#X obj 260 257 r k3;
+#N canvas 1086 394 450 300 vol-control 0;
+#X msg 18 96 MUTE;
+#X obj 139 47 r k10;
+#X obj 97 76 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 97 100 gate;
+#X obj 139 76 scale 0 1 0 95;
+#X obj 268 12 r button3;
+#X obj 19 18 r loadbang;
+#X msg 19 46 0;
+#X obj 97 47 sel 1;
+#X obj 14 169 outlet;
+#X obj 100 176 outlet;
+#X obj 210 148 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 210 172 gate;
+#X msg 210 115 1;
+#X obj 284 94 del 300;
+#X msg 303 140 0;
+#X connect 0 0 10 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 9 0;
+#X connect 4 0 3 1;
+#X connect 5 0 12 1;
+#X connect 5 0 14 0;
+#X connect 6 0 7 0;
+#X connect 6 0 0 0;
+#X connect 6 0 13 0;
+#X connect 7 0 2 0;
+#X connect 8 0 2 0;
+#X connect 11 0 12 0;
+#X connect 12 0 8 0;
+#X connect 13 0 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 11 0;
+#X restore 83 362 pd vol-control;
+#X obj 39 23 import cyclone;
+#X obj 38 119 scale 0 1 -5 400;
+#X obj 56 200 scale 0 1 -5 400;
+#X obj 57 289 scale 0 1 50 750;
+#X connect 1 0 10 0;
+#X connect 2 0 7 1;
+#X connect 3 0 7 0;
+#X connect 6 0 3 1;
+#X connect 7 0 9 0;
+#X connect 9 0 15 0;
+#X connect 10 0 3 0;
+#X connect 14 0 15 1;
+#X connect 15 0 14 0;
+#X connect 15 1 12 0;
+#X connect 15 2 13 0;
+#X connect 16 0 22 0;
+#X connect 17 0 21 0;
+#X connect 18 0 23 0;
+#X connect 19 0 14 0;
+#X connect 19 1 15 2;
+#X connect 21 0 1 0;
+#X connect 22 0 6 0;
+#X connect 23 0 2 0;
