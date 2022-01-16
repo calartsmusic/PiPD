@@ -1,0 +1,20 @@
+#N canvas 1263 147 450 300 12;
+#X obj 106 87 netreceive 3000;
+#X obj 40 104 print;
+#X obj 106 127 route but1 1;
+#X floatatom 105 157 5 0 0 0 - - -;
+#X obj 102 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 210 156 5 0 0 0 - - -;
+#X obj 207 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 211 126 route but2 \$1;
+#X obj 233 237 s pick;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 7 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 5 0 8 0;
+#X connect 7 0 5 0;
