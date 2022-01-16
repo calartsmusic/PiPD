@@ -1,0 +1,10 @@
+#N canvas 1212 40 450 300 12;
+#X obj 131 144 s programchange;
+#X msg 131 113 1;
+#X msg 170 113 2;
+#X msg 212 113 3;
+#X msg 251 113 4;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
