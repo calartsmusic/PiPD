@@ -1,0 +1,1 @@
+1, 2022-01-28 20:00:03 SPL 0.59 Moisture 0.0132 Pressure 100586.0000 Altitude 137.8146 Temperature 22.6875 Fahrenheit 72.8375 

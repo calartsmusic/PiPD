@@ -1,0 +1,1 @@
+1, 2022-02-02 20:28:50 SPL 1.00 Moisture 0.3591 Pressure 100168.2500 Altitude 173.6902 Temperature 24.0000 Fahrenheit 75.2000 Lux 206.5536 Broadband 2464.00 Infrared 1364.00 Luminosity 2464 1364 Humidity 27.2756 AQI 8.0;
