@@ -1,7 +1,0 @@
-1, 2022-02-04 00:00:02 SPL 0.05 Moisture 0.4216 Pressure 101002.0000 Altitude 102.4391 Temperature 20.7500 Fahrenheit 69.3500 Lux 7.8193 Broadband 19.00 Infrared 3.00 Luminosity 19 3 Humidity 34.8974 AQI 21.0;
-2, 2022-02-04 00:02:03 SPL 1.00 Moisture 0.4079 Pressure 101000.0000 Altitude 102.6891 Temperature 20.7500 Fahrenheit 69.3500 Lux 8.3346 Broadband 20.00 Infrared 3.00 Luminosity 20 3 Humidity 34.9813 AQI 17.0;
-3, 2022-02-04 00:04:04 SPL 0.50 Moisture 0.4089 Pressure 100997.0000 Altitude 103.2516 Temperature 20.7500 Fahrenheit 69.3500 Lux 6.2589 Broadband 16.00 Infrared 3.00 Luminosity 16 3 Humidity 34.8592 AQI 21.0;
-4, 2022-02-04 00:06:05 SPL 0.72 Moisture 0.4206 Pressure 100998.0000 Altitude 103.0641 Temperature 20.8125 Fahrenheit 69.4625 Lux 7.3018 Broadband 18.00 Infrared 3.00 Luminosity 18 3 Humidity 34.9584 AQI 17.0;
-5, 2022-02-04 00:08:06 SPL 0.26 Moisture 0.4089 Pressure 100989.2500 Altitude 103.5016 Temperature 20.8125 Fahrenheit 69.4625 Lux 7.3018 Broadband 18.00 Infrared 3.00 Luminosity 18 3 Humidity 34.8058 AQI 17.0;
-6, 2022-02-04 00:10:07 SPL 0.25 Moisture 0.4206 Pressure 100990.2500 Altitude 103.6891 Temperature 20.8750 Fahrenheit 69.5750 Lux 6.7818 Broadband 17.00 Infrared 3.00 Luminosity 17 3 Humidity 34.7143 AQI 25.0;
-7, 2022-02-04 00:12:07 SPL 0.00 Moisture 0.4372 Pressure 100991.0000 Altitude 103.4391 Temperature 20.9375 Fahrenheit 69.6875 Lux 6.7818 Broadband 17.00 Infrared 3.00 Luminosity 17 3 Humidity 34.7372 AQI 12.0;

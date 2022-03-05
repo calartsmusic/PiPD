@@ -1,1 +1,0 @@
-1, 2022-01-24 20:06:09 Moisture 0.0054 Pressure 99992.7500 Altitude 186.5028 Temperature 26.0625 Fahrenheit 78.9125 Lux 549.2288 Broadband 6462.0000 Infrared 3562.0000 Luminosity 6462 3562 Humidity 31.7388 AQI 21.0;
