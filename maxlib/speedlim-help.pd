@@ -1,0 +1,70 @@
+#N canvas 493 80 557 515 10;
+#X obj 0 0 cnv 15 552 40 empty empty speedlim 3 12 0 18 -204280 -1
+0;
+#X obj 0 332 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 0 402 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1 0
+;
+#X obj 0 451 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 79 347 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 0 503 cnv 15 552 21 empty empty empty 20 12 0 14 -233017 -33289
+0;
+#N canvas 238 349 428 75 Related_objects 0;
+#X obj 0 0 cnv 15 425 20 empty empty empty 3 12 0 14 -204280 -1 0;
+#X text 6 1 Related Objects;
+#X restore 206 507 pd Related_objects;
+#N canvas 487 588 379 276 META 0;
+#X text 12 226 HELP_PATCH_AUTHORS "pd meta" information added by Jonathan
+Wilkes for Pd version 0.42. Updated by Fred Jan Kraan 2016-02.;
+#X text 12 25 LICENSE GPL v2;
+#X text 12 85 INLET_1 float;
+#X text 12 105 OUTLET_0 float;
+#X text 12 125 OUTLET_1 float;
+#X text 12 5 KEYWORDS control analysis;
+#X text 12 45 DESCRIPTION detects the beat of rhythmic patterns;
+#X text 12 165 AUTHOR Olaf Matthes \, based on
+code written by Rober Rowe and published in 'Mashine Musicianship'
+\, Massachusetts \, 2001;
+#X text 12 65 INLET_0 float reset model;
+#X text 12 145 OUTLET_2 bang;
+#X text 12 208 MAINTAINER Fred Jan Kraan <fjkraan@xs4all.nl>;
+#X restore 502 506 pd META;
+#X obj 79 418 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 107 417 float;
+#X obj 79 372 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X text 107 373 float;
+#X text 157 417 - position on score (x index of array);
+#X obj 486 4 speedlim;
+#X text 8 23 lets information through only every N milliseconds, f
+86;
+#X floatatom 91 51 5 0 0 0 - - -, f 5;
+#X floatatom 91 297 5 0 0 0 - - -, f 5;
+#X floatatom 202 97 5 0 0 0 - - -, f 5;
+#X msg 98 70 bang;
+#X obj 194 240 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 194 269 timer;
+#X floatatom 194 295 5 0 0 0 - - -, f 5;
+#X obj 130 295 print;
+#X msg 136 70 this is speedlim;
+#X obj 91 174 maxlib/speedlim 500;
+#X text 107 346 anything;
+#X text 172 346 - input data;
+#X text 172 373 - time between outputs in ms;
+#X obj 91 262 route float;
+#X text 80 475 1: time in milli-seconds;
+#X connect 15 0 24 0;
+#X connect 17 0 24 1;
+#X connect 18 0 24 0;
+#X connect 19 0 20 1;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 19 0;
+#X connect 24 0 28 0;
+#X connect 28 0 16 0;
+#X connect 28 1 22 0;
