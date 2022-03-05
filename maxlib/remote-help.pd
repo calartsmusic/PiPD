@@ -1,0 +1,48 @@
+#N canvas 499 80 557 515 10;
+#X obj 0 0 cnv 15 552 40 empty empty remote 3 12 0 18 -204280 -1 0
+;
+#X obj 0 359 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 0 403 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1 0
+;
+#X obj 0 442 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 79 370 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 0 476 cnv 15 552 21 empty empty empty 20 12 0 14 -233017 -33289
+0;
+#N canvas 240 348 428 75 Related_objects 0;
+#X obj 0 0 cnv 15 425 20 empty empty empty 3 12 0 14 -204280 -1 0;
+#X text 6 1 Related Objects;
+#X restore 206 478 pd Related_objects;
+#N canvas 493 585 379 261 META 0;
+#X text 12 137 HELP_PATCH_AUTHORS "pd meta" information added by Jonathan
+Wilkes for Pd version 0.42. Updated by Fred Jan Kraan 2016-02.;
+#X text 12 86 AUTHOR Olaf Matthes originally
+written by James McCartney for Max;
+#X text 12 25 LICENSE GPL v2;
+#X text 12 5 KEYWORDS control nonlocal;
+#X text 12 45 DESCRIPTION send data to any receive object;
+#X text 12 65 INLET_0 anything;
+#X text 12 118 MAINTAINER Fred Jan Kraan <fjkraan@xs4all.nl>;
+#X restore 502 480 pd META;
+#X obj 500 4 remote;
+#X text 8 23 send data to any receive object;
+#X obj 305 218 receive bla;
+#X obj 410 218 receive foo;
+#X obj 305 246 print bla;
+#X obj 410 246 print foo;
+#X msg 81 74 bla 17.3 23;
+#X msg 94 123 foo 13 \, bla 4;
+#X msg 87 98 foo five is 2 more than 3;
+#X msg 383 110 \; bla 17.3 23;
+#X text 385 148 this does the same...;
+#X obj 81 253 maxlib/remote;
+#X text 107 369 list;
+#X text 181 369 - first element is target \, the rest is the sent message
+;
+#X connect 10 0 12 0;
+#X connect 11 0 13 0;
+#X connect 14 0 19 0;
+#X connect 15 0 19 0;
+#X connect 16 0 19 0;
