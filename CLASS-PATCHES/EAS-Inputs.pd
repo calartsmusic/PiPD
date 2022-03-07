@@ -1,0 +1,71 @@
+#N canvas 99 62 514 477 12;
+#X msg 91 48 setup_wiringPi;
+#X obj 30 78 wiringPi_mcp3008 0 8;
+#X obj 30 48 metro 5;
+#X obj 30 23 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 30 112 unpack f f f f f f f f;
+#X obj 67 298 netreceive 3000;
+#X obj 17 339 print;
+#X obj 67 339 route but1 \$1;
+#X obj 67 370 bng 36 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 228 50 import cyclone;
+#X obj 30 142 scale 0 1024 0 1;
+#X obj 30 199 nbx 4 36 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 16
+-262144 -1 -1 0 256;
+#X obj 114 171 scale 0 1024 0 1;
+#X obj 114 200 nbx 4 36 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 16
+-262144 -1 -1 0 256;
+#X obj 198 143 scale 0 1024 0 1;
+#X obj 198 200 nbx 4 36 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 16
+-262144 -1 -1 0 256;
+#X obj 282 172 scale 0 1024 0 1;
+#X obj 282 201 nbx 4 36 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 16
+-262144 -1 -1 0 256;
+#X obj 30 246 s k1;
+#X obj 114 246 s k2;
+#X obj 198 246 s k3;
+#X obj 282 246 s k4;
+#X obj 167 370 bng 36 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 67 416 s b1;
+#X obj 167 416 s b2;
+#X obj 167 339 route but2 \$1;
+#X obj 270 370 bng 36 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 370 370 bng 36 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 270 339 route but3 \$1;
+#X obj 370 339 route but4 \$1;
+#X obj 270 416 s b3;
+#X obj 370 416 s b4;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 10 0;
+#X connect 4 1 12 0;
+#X connect 4 2 14 0;
+#X connect 4 3 16 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 5 0 25 0;
+#X connect 5 0 28 0;
+#X connect 5 0 29 0;
+#X connect 7 0 8 0;
+#X connect 8 0 23 0;
+#X connect 10 0 11 0;
+#X connect 11 0 18 0;
+#X connect 12 0 13 0;
+#X connect 13 0 19 0;
+#X connect 14 0 15 0;
+#X connect 15 0 20 0;
+#X connect 16 0 17 0;
+#X connect 17 0 21 0;
+#X connect 22 0 24 0;
+#X connect 25 0 22 0;
+#X connect 26 0 30 0;
+#X connect 27 0 31 0;
+#X connect 28 0 26 0;
+#X connect 29 0 27 0;
